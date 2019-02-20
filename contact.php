@@ -1,5 +1,5 @@
 <?php 
-$title = "MySQL PHP A1 - Contact";
+$metaTitle = "MySQL PHP A1 - Contact";
 $content = "<main>
    <div>
   <h1>Contact</h1>

@@ -1,3 +1,8 @@
+:root{
+ --btn-primary: #a1d9f0; 
+ --blue: cornflowerblue;
+ --white: #f7f7f7;
+}
 *{
   margin: 0;
   padding: 0;
@@ -21,4 +26,43 @@ header, footer{
 }
 .file-missing{
   color: red;
+}
+.ad{
+  color: #d00;
+  font-size: 2em;
+  font-weight: bold;
+  width: 250px;
+  border: 1px solid #d00;
+  padding: 4px;
+  margin: 4px;
+}
+h1{
+ font-weight: 100;
+ font-size: 5.2rem;
+}
+h2{
+  margin: 10px 0;
+}
+input {
+ margin-right: 10px;
+ margin-bottom: 10px;
+ box-shadow: none;
+}
+.button{
+ background-color: var(--blue);
+ color: var(--white);
+ border-radius: 6px;
+ margin-bottom: 10px;
+}
+input, .button{
+ font-size: .8rem;
+ letter-spacing: 1px;
+ border: 1px solid var(--blue);
+ outline: 0;
+ padding: 4px;
+}
+input[type=checkbox]{ 
+ height: 20px;  
+ width: 20px;
+ border-radius: 50px;
 }

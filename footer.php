@@ -1,4 +1,4 @@
 <div>
-  Footer
+  © Current Year
 </div>
 

@@ -1,5 +1,5 @@
 <?php 
-$title = "MySQL PHP A1";
+$metaTitle = "MySQL PHP A1";
 ob_start();
 ?>
 

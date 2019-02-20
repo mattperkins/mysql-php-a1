@@ -1,41 +1,43 @@
 <?php 
-$title = "MySQL PHP A1";
+$metaTitle = "MySQL PHP A1";
 ob_start();
 ?>
 
 <?php 
-  
+  $email = $title = $details = '';
+  $errors = ['email'=>'', 'title'=>'', 'details'=>''];
+
   if(isset($_POST['submit'])){
     // check email
     if(empty($_POST['email'])){
-      echo 'An email is required <br />';
+      $errors['email'] = 'An email is required <br />';
     } else {
       // echo htmlspecialchars($_POST['email']) . '<br />';
       $email = $_POST['email'];
       if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        echo 'A valid email is required <br />';
+        $errors['email'] = 'A valid email is required <br />';
       }
     }
     // check title
     if(empty($_POST['title'])){
-      echo 'A title is required <br />';
+      $errors['title'] = 'A title is required <br />';
     } else {
       // echo htmlspecialchars($_POST['title']) . '<br />';
       $title = $_POST['title'];
       // regex = letters and spaces
       if(!preg_match('/^[a-zA-Z\s]+$/', $title)){
-        echo "Title must be letters and spaces only";
+        $errors['title'] = "Title must be letters and spaces only";
       }
     }
     // check email
     if(empty($_POST['details'])){
-      echo 'Details are required <br />';
+      $errors['details'] = 'Details are required <br />';
     } else {
       // echo htmlspecialchars($_POST['details']) . '<br />';
       $details = $_POST['details'];
       // regex = comma seperated words
       if(!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $details)){
-        echo "Details must be comma seperated";
+        $errors['details'] = "Details must be comma seperated";
       }
     }
   } // end form POST validation
@@ -44,12 +46,17 @@ ob_start();
 
 <form action="form.php" method="POST">
   <label>Your Email</label>
-  <input type="text" name="email">
+  <input type="text" name="email" value="<?php echo $email; ?>">
+  <div class="error" style="color: red;"><?php echo $errors['email']; ?></div>
+
   <label>Your Title</label>
-  <input type="text" name="title">
+  <input type="text" name="title" value="<?php echo $title; ?>">
+  <div class="error" style="color: red;"><?php echo $errors['title']; ?></div>
+
   <label>Your Details</label>
-  <input type="text" name="details">
-  
+  <input type="text" name="details" value="<?php echo $details; ?>">
+  <div class="error" style="color: red;"><?php echo $errors['details']; ?></div>
+
   <input class="button" type="submit" name="submit" value="submit">
 </form>
 

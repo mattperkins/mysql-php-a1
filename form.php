@@ -10,19 +10,33 @@ ob_start();
     if(empty($_POST['email'])){
       echo 'An email is required <br />';
     } else {
-      echo htmlspecialchars($_POST['email']) . '<br />';
+      // echo htmlspecialchars($_POST['email']) . '<br />';
+      $email = $_POST['email'];
+      if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        echo 'A valid email is required <br />';
+      }
     }
     // check title
     if(empty($_POST['title'])){
       echo 'A title is required <br />';
     } else {
-      echo htmlspecialchars($_POST['title']) . '<br />';
+      // echo htmlspecialchars($_POST['title']) . '<br />';
+      $title = $_POST['title'];
+      // regex = letters and spaces
+      if(!preg_match('/^[a-zA-Z\s]+$/', $title)){
+        echo "Title must be letters and spaces only";
+      }
     }
     // check email
     if(empty($_POST['details'])){
       echo 'Details are required <br />';
     } else {
-      echo htmlspecialchars($_POST['details']) . '<br />';
+      // echo htmlspecialchars($_POST['details']) . '<br />';
+      $details = $_POST['details'];
+      // regex = comma seperated words
+      if(!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $details)){
+        echo "Details must be comma seperated";
+      }
     }
   } // end form POST validation
 

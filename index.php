@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>MySQL PHP A1</title>
-</head>
-<body>
-<header>
-  <?php include "nav.php"?>
-</header> 
-</body>
-</html>
+<?php $home = "
+
+<h1>Home</h1>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolorum, veritatis architecto maxime perspiciatis possimus molestiae explicabo mollitia minima optio quidem beatae. Totam vel dignissimos assumenda nemo, mollitia blanditiis quis.</p>
+
+"; ?>
+
+<main>
+  <?php $content = $home ?>
+</main>
+<?php include "master.php" ?>
+
+

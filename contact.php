@@ -1,14 +1,11 @@
-<?php $contact = "
-
-<h1>Contact</h1>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolorum, veritatis architecto maxime perspiciatis possimus molestiae explicabo mollitia minima optio quidem beatae. Totam vel dignissimos assumenda nemo, mollitia blanditiis quis.</p>
-
-"; ?>
-
 <main>
-  <?php $content = $contact ?>
+  <?php $content =  
+  
+  "<div>
+  <h1>Contact</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem rerum architecto maiores veritatis deserunt dignissimos illum culpa quisquam reiciendis perferendis placeat laudantium nisi temporibus reprehenderit labore aut, accusantium sapiente?</p>
+</div>"
+
+  ?>
 </main>
 <?php include "master.php" ?>
-
-

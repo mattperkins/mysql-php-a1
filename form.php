@@ -5,9 +5,9 @@ ob_start();
 
 <?php 
   if(isset($_POST['submit'])){
-    echo $_POST['email'];
-    echo $_POST['title'];
-    echo $_POST['details'];
+    echo htmlspecialchars($_POST['email']);
+    echo htmlspecialchars($_POST['title']);
+    echo htmlspecialchars($_POST['details']);
   }
  ?>
 <form action="form.php" method="POST">

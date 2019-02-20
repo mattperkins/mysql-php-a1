@@ -2,6 +2,7 @@
 $title = "MySQL PHP A1";
 ob_start();
 ?>
+
 <main>
    <div>
   <h1>Home</h1>

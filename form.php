@@ -40,6 +40,13 @@ ob_start();
         $errors['details'] = "Details must be comma seperated";
       }
     }
+    // if no errors : returns false || if errors : returns true
+    if(array_filter($errors)){
+      echo 'There are errors in the form';
+    } else {
+      header('Location: index.php');
+    }
+
   } // end form POST validation
 
  ?>

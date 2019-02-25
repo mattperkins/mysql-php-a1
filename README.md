@@ -1,1 +1,12 @@
-### PHP backend connecting to mySQL database
+## PHP backend connecting to mySQL database
+
+### SQL Example
+```
+create table posts (
+  id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+  subject varchar(255) not null,
+  content TEXT not null,
+  date datetime not null
+);
+
+```

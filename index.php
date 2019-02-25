@@ -1,4 +1,16 @@
-<?php 
+<?php
+
+// connect to db
+$conn = mysqli_connect('localhost', 'admin', 'test1234', 'lemon_products');
+if(!$conn){
+  echo "connection error: " . mysqli_connect_error();
+}
+
+// write query for all products
+// $sql = "SELECT * FROM products"
+$sql = "SELECT email, title, details, id FROM products";
+
+// view 
 $metaTitle = "MySQL PHP A1";
 ob_start();
 ?>

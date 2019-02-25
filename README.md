@@ -10,3 +10,8 @@ create table posts (
 );
 
 ```
+
+```
+// cookies expires in 1 day
+setcookie("name", "Fred", time() + 86400);
+```

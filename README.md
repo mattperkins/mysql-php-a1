@@ -17,6 +17,10 @@ select subject from posts;
 select content from posts;
 select * from posts;
 ```
+```
+select * from posts where id='1';
+```
+
 
 ### COOKIES
 ```

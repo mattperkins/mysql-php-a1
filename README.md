@@ -9,6 +9,9 @@ create table posts (
   date datetime not null
 );
 ```
+```
+insert into posts (subject, content, date) VALUES ('Subject One', 'Content with regards subject one.', '2019-02-25 18:51.00');
+```
 
 
 ### COOKIES

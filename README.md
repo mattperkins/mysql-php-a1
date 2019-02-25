@@ -12,7 +12,11 @@ create table posts (
 ```
 insert into posts (subject, content, date) VALUES ('Subject One', 'Content with regards subject one.', '2019-02-25 18:51.00');
 ```
-
+```
+select subject from posts;
+select content from posts;
+select * from posts;
+```
 
 ### COOKIES
 ```

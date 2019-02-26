@@ -20,7 +20,10 @@ SELECT * FROM posts;
 ```
 SELECT * FROM posts WHERE id='1';
 ```
-
+```
+SELECT * FROM posts WHERE id='1' AND subject='Subject One';
+SELECT * FROM posts WHERE id='1' OR subject='Subject One';
+```
 
 
 ### COOKIES

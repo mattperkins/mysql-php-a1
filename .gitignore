@@ -9,3 +9,4 @@ keys.js
 config 
 notes.js
 includes/*
+.vscode/*

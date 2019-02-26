@@ -33,6 +33,11 @@ WHERE id='1';
 DELETE FROM posts
 WHERE id='1';
 ```
+```
+SELECT * FROM posts ORDER BY id ASC;
+SELECT * FROM posts ORDER BY id DESC;
+SELECT * FROM posts ORDER BY subject DESC;
+```
 
 
 ### COOKIES

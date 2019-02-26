@@ -8,7 +8,7 @@ if(!$conn){
 
 // write query for all products
 // $sql = "SELECT * FROM products"
-$sql = "SELECT email, title, details, id FROM products;";
+$sql = "SELECT email, title, details, id FROM products ORDER BY created_at;";
 
 // make query and get result
 $result = mysqli_query($conn, $sql);
@@ -22,7 +22,7 @@ mysqli_free_result($result);
 mysqli_close($conn);
 
 // render the results associative arrays to page
-print_r($products);
+// print_r($products);
 
 // view 
 $metaTitle = "MySQL PHP A1";
@@ -30,16 +30,17 @@ ob_start();
 ?>
 
 <main>
-   <div>
-  <h1>Home</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem rerum architecto maiores veritatis deserunt dignissimos illum culpa quisquam reiciendis perferendis placeat laudantium nisi temporibus reprehenderit labore aut, accusantium sapiente?</p>
-</div>
-
 <div>
-  <h2>Further information</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem rerum architecto maiores veritatis deserunt dignissimos illum culpa quisquam reiciendis perferendis placeat laudantium nisi temporibus reprehenderit labore aut, accusantium sapiente?</p>
+  <h1>Home</h1>
+  
+  <?php foreach($products as $product) { ?>
+    <div>
+      <?php echo htmlspecialchars($product['title']); ?>
+    </div>
+  <?php } ?> 
+  
+  
 </div>
-
 </main>
 
 <?php 

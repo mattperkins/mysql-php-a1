@@ -1,23 +1,20 @@
 <?php 
 // session_start();
-// echo $_SESSION["username"];
 
-// connect to db
-include_once('includes/dbconfig.php');
-if(!$conn){
-  echo "connection error: " . mysqli_connect_error();
-}
 
-// view
+// view 
 $metaTitle = "MySQL PHP A1 - Contact";
-$content = "<main>
-   <div>
-  <h1>Contact</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem rerum architecto maiores veritatis deserunt dignissimos illum culpa quisquam reiciendis perferendis placeat laudantium nisi temporibus reprehenderit labore aut, accusantium sapiente?</p>
-</div>
+ob_start();
+?>
 
-</main>";
+<form action="includes/dbadd.php" method="POST">
+  <input type="text" name="subject" placeholder="Add a subject">
+  <input type="text" name="content" placeholder="Add content">
+  <button type="submit" name="submit">Add to Database</button>
+</form>
 
 
+<?php 
+$content = ob_get_clean();
 include "master.php"; 
 ?>

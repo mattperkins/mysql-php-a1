@@ -53,13 +53,13 @@ input {
  margin-bottom: 10px;
  box-shadow: none;
 }
-.button{
+.button, button{
  background-color: var(--blue);
  color: var(--white);
  border-radius: 6px;
  margin-bottom: 10px;
 }
-input, .button{
+input, .button, button{
  font-size: .8rem;
  letter-spacing: 1px;
  border: 1px solid var(--blue);

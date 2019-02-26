@@ -51,6 +51,7 @@ ob_start();
 
  ?>
 
+<!-- validation only / doesnt post data to db yet -->
 <form action="form.php" method="POST">
   <label>Your Email</label>
   <input type="text" name="email" value="<?php echo $email; ?>">

@@ -1,4 +1,47 @@
-<?php 
+<?php
+  // include in header so session persists across entire site 
+  session_start();
+
+// instantiate session
+$_SESSION["username"] = "fred4";
+// echo $_SESSION["username"];
+
+if(!isset($_SESSION["username"])){
+  echo "You are not logged in";
+} else {
+  echo "You are now logged in";
+}
+
+// connect to db
+include_once('includes/dbconfig.php');
+if(!$conn){
+  echo "connection error: " . mysqli_connect_error();
+}
+
+// get data from db
+$sql = "SELECT * FROM posts;";
+// make query and get result
+$getData = mysqli_query($conn, $sql);
+// check for data in db table rows
+$postDataCheck = mysqli_num_rows($getData);
+if($postDataCheck > 0) {
+  while($row = mysqli_fetch_assoc($getData)){
+    echo '<br />' . $row['subject'];
+  }
+}
+
+// manually (on file save) add data to database
+  // $sql_add = "INSERT INTO posts (subject, content, date) VALUES ('Subject Three', 'Content with regards subject three.', '2019-02-26 00:14.00');";
+
+// make query and get result
+  // mysqli_query($conn, $sql_add);
+
+
+
+
+
+
+// view
 $metaTitle = "MySQL PHP A1 - About";
 $content = "<main>
    <div>

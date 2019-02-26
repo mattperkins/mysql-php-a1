@@ -1,6 +1,4 @@
 <?php 
-// session_start();
-
 
 // view 
 $metaTitle = "MySQL PHP A1 - Contact";

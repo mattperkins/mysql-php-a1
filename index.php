@@ -33,6 +33,7 @@ ob_start();
 <div>
   <h1>Home</h1>
   
+  <!-- render db data entered via phpmyadmin/sql -->
   <?php foreach($products as $product) { ?>
     <div>
       <?php echo htmlspecialchars($product['title']); ?>

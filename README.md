@@ -24,6 +24,11 @@ SELECT * FROM posts WHERE id='1';
 SELECT * FROM posts WHERE id='1' AND subject='Subject One';
 SELECT * FROM posts WHERE id='1' OR subject='Subject One';
 ```
+```
+UPDATE posts
+SET subject='Update Subject One', content='Content One has been updated!'
+WHERE id='1';
+```
 
 
 ### COOKIES

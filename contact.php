@@ -1,4 +1,14 @@
 <?php 
+// session_start();
+// echo $_SESSION["username"];
+
+// connect to db
+include_once('includes/dbconfig.php');
+if(!$conn){
+  echo "connection error: " . mysqli_connect_error();
+}
+
+// view
 $metaTitle = "MySQL PHP A1 - Contact";
 $content = "<main>
    <div>
@@ -7,6 +17,7 @@ $content = "<main>
 </div>
 
 </main>";
+
 
 include "master.php"; 
 ?>

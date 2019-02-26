@@ -1,14 +1,28 @@
 <?php
 
 // connect to db
-$conn = mysqli_connect('localhost', 'admin', 'test1234', 'lemon_products');
+include_once('includes/dbconfig.php');
 if(!$conn){
   echo "connection error: " . mysqli_connect_error();
 }
 
 // write query for all products
 // $sql = "SELECT * FROM products"
-$sql = "SELECT email, title, details, id FROM products";
+$sql = "SELECT email, title, details, id FROM products;";
+
+// make query and get result
+$result = mysqli_query($conn, $sql);
+
+// fetch the resulting rows(record) as an array
+$products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// free result from memory
+mysqli_free_result($result);
+// close db connection
+mysqli_close($conn);
+
+// render the results associative arrays to page
+print_r($products);
 
 // view 
 $metaTitle = "MySQL PHP A1";

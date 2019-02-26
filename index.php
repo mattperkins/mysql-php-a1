@@ -6,14 +6,14 @@ if(!$conn){
   echo "connection error: " . mysqli_connect_error();
 }
 
-// write query for all products
 // $sql = "SELECT * FROM products"
+// query all rows in db table products
 $sql = "SELECT email, title, details, id FROM products ORDER BY created_at;";
 
 // make query and get result
 $result = mysqli_query($conn, $sql);
 
-// fetch the resulting rows(record) as an array
+// fetch the resulting rows(records) as an array
 $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 // free result from memory

@@ -5,12 +5,11 @@
 create table posts (
   id int(11) not null PRIMARY KEY AUTO_INCREMENT,
   subject varchar(255) not null,
-  content TEXT not null,
-  date datetime not null
+  content TEXT not null
 );
 ```
 ```
-INSERT INTO posts (subject, content, date) VALUES ('Subject One', 'Content with regards subject one.', '2019-02-25 18:51.00');
+INSERT INTO posts (subject, content) VALUES ('Subject One', 'Content with regards subject one.');
 ```
 ```
 SELECT subject FROM posts;

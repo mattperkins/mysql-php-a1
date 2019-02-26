@@ -30,12 +30,6 @@ if($postDataCheck > 0) {
   }
 }
 
-// manually (on file save) add data to database
-  // $sql_add = "INSERT INTO posts (subject, content) VALUES ('Subject Three', 'Content with regards subject three.');";
-
-// make query and get result
-  // mysqli_query($conn, $sql_add);
-
 
 
 

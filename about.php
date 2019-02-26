@@ -15,7 +15,7 @@ $getData = mysqli_query($conn, $sql);
 $metaTitle = "MySQL PHP A1 - About";
   ob_start();
 
-
+// renders data from db input from contact.php form
 // check for data in db and render table rows
 $postDataCheck = mysqli_num_rows($getData);
 if($postDataCheck > 0) {

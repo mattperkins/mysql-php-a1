@@ -10,16 +10,17 @@ create table posts (
 );
 ```
 ```
-insert into posts (subject, content, date) VALUES ('Subject One', 'Content with regards subject one.', '2019-02-25 18:51.00');
+INSERT INTO posts (subject, content, date) VALUES ('Subject One', 'Content with regards subject one.', '2019-02-25 18:51.00');
 ```
 ```
-select subject from posts;
-select content from posts;
-select * from posts;
+SELECT subject FROM posts;
+SELECT content FROM posts;
+SELECT * FROM posts;
 ```
 ```
-select * from posts where id='1';
+SELECT * FROM posts WHERE id='1';
 ```
+
 
 
 ### COOKIES

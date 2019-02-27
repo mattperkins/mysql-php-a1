@@ -5,6 +5,7 @@ $metaTitle = "MySQL PHP A1 - Contact";
 ob_start();
 ?>
 
+<h3>dbAdd form</h3>
 <!-- submits data to db -->
 <form action="includes/dbadd.php" method="POST">
   <input type="text" name="subject" placeholder="Add a subject">

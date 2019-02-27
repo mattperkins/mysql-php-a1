@@ -24,20 +24,38 @@ mysqli_close($conn);
 // render the results associative arrays to page
 // print_r($products);
 
+// print_r(explode(' ', $products[2]['details']));
+
 // view 
 $metaTitle = "MySQL PHP A1";
 ob_start();
 ?>
 
-<main>
-<div>
-  <h1>Home</h1>
-  
+<main class="container">
+
+<h3>Rendered data from db (added via phpmysql)</h3>
+
+<div class="row">
+    
   <!-- render db data entered via phpmyadmin/sql -->
   <?php foreach($products as $product) { ?>
-    <div>
-      <?php echo htmlspecialchars($product['title']); ?>
+    
+    <div class="col-md-4">
+      <div class="card z-depth-0">
+        <div class="card-content center">
+          <h6>
+            <?php echo htmlspecialchars($product['title']); ?>
+          </h6>
+          <h6>
+            <?php echo htmlspecialchars($product['details']); ?>
+          </h6> 
+        </div>
+        <div class="card-action right-align">
+          <a href="#" class="brand-text">more info</a>
+        </div>
+      </div>
     </div>
+      
   <?php } ?> 
   
   

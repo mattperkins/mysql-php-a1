@@ -14,7 +14,11 @@ $getData = mysqli_query($conn, $sql);
 // view 
 $metaTitle = "MySQL PHP A1 - About";
   ob_start();
+?>
 
+<h3>Rendered data from db (added via dbAdd form)</h3>
+
+<?php 
 // renders data from db input from contact.php form
 // check for data in db and render table rows
 $postDataCheck = mysqli_num_rows($getData);

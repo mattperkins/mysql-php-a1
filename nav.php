@@ -1,6 +1,6 @@
 <ul>
-  <li><a href="index.php">Home</a></li>
-  <li><a href="about.php">About</a></li>
-  <li><a href="contact.php">Contact</a></li>
-  <li><a href="form.php">Form</a></li>
+  <li><a href="index.php">dbDisplayed</a></li>
+  <li><a href="about.php">dbRender</a></li>
+  <li><a href="contact.php">dbAdd</a></li>
+  <li><a href="form.php">Validation</a></li>
 </ul>

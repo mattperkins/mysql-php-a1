@@ -44,3 +44,12 @@ SELECT * FROM posts ORDER BY subject DESC;
 // cookies expires in 1 day
 setcookie("name", "Fred", time() + 86400);
 ```
+
+```
+<ul>
+// explode array at empty space and render loop
+<?php foreach(explode(' ', $products['details']) as $detail) { ?>
+  <li><?php echo htmlspecialchars($detail); ?></li>
+<?php } ?>
+</ul>
+```

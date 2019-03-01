@@ -38,7 +38,7 @@ ob_start();
 <div class="row">
     
   <!-- render db data entered via phpmyadmin/sql -->
-  <?php foreach($products as $product) { ?>
+  <?php foreach($products as $product) : ?>
     
     <div class="col-md-4">
       <div class="card z-depth-0">
@@ -56,7 +56,7 @@ ob_start();
       </div>
     </div>
       
-  <?php } ?> 
+  <?php endforeach; ?> 
   
   
 </div>

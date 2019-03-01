@@ -68,7 +68,7 @@ ob_start();
   } // end form POST validation
 
  ?>
-<h3>Form validates only / doesnt save data to db</h3>
+<h3>Form validates and saves data to db</h3>
 <!-- validation only / doesnt post data to db yet -->
 <form action="form.php" method="POST">
   <label>Your Email</label>

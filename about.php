@@ -13,7 +13,7 @@ $metaTitle = "MySQL PHP A1 - About";
   ob_start();
 ?>
 
-<h3>Rendered data from db (added via dbAdd form)</h3>
+<h3>db data from dbAdd form</h3>
 
 <?php 
 // renders data from db input from contact.php form

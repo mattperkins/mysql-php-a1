@@ -1,4 +1,8 @@
 <?php 
+
+// connect to db
+include_once('includes/dbconnect.php');
+
 $metaTitle = "MySQL PHP A1";
 ob_start();
 ?>

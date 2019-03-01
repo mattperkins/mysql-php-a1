@@ -30,7 +30,7 @@ ob_start();
 
 <main class="container">
 
-<h3>Rendered data from db (added via phpmysql)</h3>
+<h3>db data from validation form</h3>
 
 <div class="row">
     

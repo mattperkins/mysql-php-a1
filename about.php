@@ -1,10 +1,7 @@
 <?php
 
 // connect to db
-include_once('includes/dbconfig.php');
-if(!$conn){
-  echo "connection error: " . mysqli_connect_error();
-}
+include_once('includes/dbconnect.php');
 
 // get data from db
 $sql = "SELECT * FROM posts;";

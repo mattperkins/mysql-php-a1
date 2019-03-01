@@ -48,7 +48,21 @@ ob_start();
     if(array_filter($errors)){
       echo 'There are errors in the form';
     } else {
-      header('Location: index.php');
+      $email = mysqli_real_escape_string($conn, $_POST['email']);
+      $title = mysqli_real_escape_string($conn, $_POST['title']);
+      $details = mysqli_real_escape_string($conn, $_POST['details']);
+      
+      // create sql
+      $sql = "INSERT INTO products(email,title,details) VALUES('$email', '$title', '$details')"; 
+
+      // save to db and check
+      if(mysqli_query($conn, $sql)) {
+        // success
+        header('Location: index.php'); 
+      } else {
+        // error
+        echo "Query error: " . mysqli_error($conn);
+      }
     }
 
   } // end form POST validation

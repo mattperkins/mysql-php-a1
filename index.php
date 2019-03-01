@@ -1,10 +1,7 @@
 <?php
 
 // connect to db
-include_once('includes/dbconfig.php');
-if(!$conn){
-  echo "connection error: " . mysqli_connect_error();
-}
+include_once('includes/dbconnect.php');
 
 // $sql = "SELECT * FROM products"
 // query all rows in db table products
@@ -58,7 +55,11 @@ ob_start();
       
   <?php endforeach; ?> 
   
-  
+  <?php if(count($products) >= 1): ?>
+    <p>More than 1 post calculated</p>
+  <?php else: ?>
+    <p>Less than 1 post calculated</p>
+  <?php endif; ?>
 </div>
 </main>
 

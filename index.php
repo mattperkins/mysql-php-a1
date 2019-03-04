@@ -28,7 +28,7 @@ $metaTitle = "MySQL PHP A1";
 ob_start();
 ?>
 
-<main class="container">
+<main>
 
 <h3>db data from validation form</h3>
 
@@ -48,7 +48,7 @@ ob_start();
           </h6> 
         </div>
         <div class="card-action right-align">
-          <a href="#" class="brand-text">more info</a>
+          <a href="details.php?id=<?php echo $product['id'] ?>" class="brand-text">more info</a>
         </div>
       </div>
     </div>

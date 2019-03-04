@@ -2,6 +2,19 @@
 
 ### SQL
 ```
+CREATE TABLE Users (
+ID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+title varchar(255) NOT NULL,
+body text NOT NULL,
+author varchar(255) NOT NULL,
+is_published boolean DEFAULT true NOT NULL,
+created_at datetime DEFAULT CURRENT_TIMESTAMP);
+```
+```
+INSERT INTO Users (title, body, author) 
+VALUES ('Variance and commodity shift', 'Outlets presuppose elemental field research showing over variant resulting bio lag', 'Fred Cruis');
+```
+```
 create table posts (
   id int(11) not null PRIMARY KEY AUTO_INCREMENT,
   subject varchar(255) not null,

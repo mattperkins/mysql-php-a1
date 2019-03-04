@@ -3,6 +3,20 @@
 // connect to db
 include_once('includes/dbconnect.php');
 
+if(isset($_POST['delete-product'])) {
+
+  $id_to_delete = mysqli_real_escape_string($conn, $_POST['id_to_delete']);
+
+  $sql = "DELETE FROM products WHERE id = $id_to_delete";
+
+  if(mysqli_query($conn, $sql)){
+    // success
+    header('Location: index.php');
+  } else {
+    // failure
+    echo 'query error: ' . mysqli_error($conn);
+  }
+}
 
 // check GET request id param
 if(isset($_GET['id'])){
@@ -40,6 +54,13 @@ $metaTitle = "MySQL PHP A1 - Details";
     <p><?php echo date($product['created_at']); ?></p>
     <h5>Product Details</h5>
     <p><?php echo htmlspecialchars($product['details']); ?></p>
+
+    <!-- delete $product '// required for db delete -->
+  <form action="details.php" method="POST">
+    <input type="hidden" name="id_to_delete" value="<?php echo $product['id']; ?>">
+    <input class="btn btn-danger" type="submit" name="delete-product" value="DELETE"/>
+  </form>
+
   <?php else: ?>
     <p>No products found in database</p>
   <?php endif ?>

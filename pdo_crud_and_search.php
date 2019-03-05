@@ -21,7 +21,8 @@ try {
   // var_dump($dsn);
 }
 catch(Exception $e) {
-  echo $e->getMessage();
+  // echo $e->getMessage();
+  echo "An error has occurred.";
 }
 
 

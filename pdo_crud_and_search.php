@@ -14,10 +14,17 @@ include_once('includes/dbconnect.php');
 include_once('includes/dbconfig.php');
 
 //  set data source name (DSN)
-$dsn = 'mysql:host='. $DBHOST .';dbname=' . $DBNAME;
-
+$dsn = "mysql:host=$DBHOST;dbname=$DBNAME;charset=utf8";
 // create PDO instance
-$pdo = new PDO($dsn, $DBUSER, $DBPASS);
+try {
+  $pdo = new PDO($dsn, $DBUSER, $DBPASS);
+  // var_dump($dsn);
+}
+catch(Exception $e) {
+  echo $e->getMessage();
+}
+
+
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
 // required when using LIMIT in SQL query
@@ -43,7 +50,7 @@ $stmt->execute([$sql]);
 $users = $stmt->fetchAll();
 
 foreach($users as $user){
-  echo $user->title . "<br />";
+  echo "<p />" . $user->title;
 }
 
 

@@ -7,6 +7,6 @@ env.js
 .env 
 keys.js 
 config 
-notes.js
+notes.php
 includes/*
 .vscode/*
